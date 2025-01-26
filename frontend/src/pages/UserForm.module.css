@@ -34,7 +34,7 @@
 .submitButton {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: #a64ddd;
   border: none;
   color: white;
   font-size: 18px;
@@ -44,11 +44,11 @@
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+  background-color: #9d26e7;
 }
 
 .submitButton:active {
-  background-color: #004085;
+  background-color: #a64ddd;
 }
 
 @media (max-width: 600px) {

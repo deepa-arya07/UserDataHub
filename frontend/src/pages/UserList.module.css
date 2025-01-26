@@ -1,0 +1,106 @@
+/* UserList.module.css */
+
+/* Container for the user list */
+.userListContainer {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
+/* Title styling */
+.title {
+  font-size: 24px;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* List styling */
+.userList {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual user item */
+.userItem {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.userItem:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* No users text */
+.noUsers {
+  text-align: center;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+/* Responsive Design */
+
+/* For small screens like phones (max-width: 600px) */
+@media (max-width: 600px) {
+  .userListContainer {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .userItem {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .noUsers {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .userListContainer {
+    padding: 18px;
+    margin: 15px auto;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .userItem {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .userListContainer {
+    max-width: 1000px;
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .userItem {
+    font-size: 18px;
+    padding: 18px;
+  }
+}

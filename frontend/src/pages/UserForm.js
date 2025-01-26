@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const UserForm = () => {
   const [userData, setUserData] = useState({
     user: "",
-    interest: "",
+    interest: [],
     age: "",
     mobile: "",
     email: "",
@@ -13,7 +13,13 @@ const UserForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+
+    if (name === "interest") {
+      const interestsArray = value.split(",").map((item) => item.trim());
+      setUserData({ ...userData, [name]: interestsArray });
+    } else {
+      setUserData({ ...userData, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -36,7 +42,7 @@ const UserForm = () => {
           confirmButtonText: "OK",
         });
 
-        setUserData({ user: "", interest: "", age: "", mobile: "", email: "" });
+        setUserData({ user: "", interest: [], age: "", mobile: "", email: "" });
       } else {
         const errorData = await response.json();
         Swal.fire({
@@ -73,7 +79,7 @@ const UserForm = () => {
         type="text"
         name="interest"
         placeholder="Interests (comma separated)"
-        value={userData.interest}
+        value={userData.interest.join(", ")}
         onChange={handleChange}
         className={styles.input}
         required

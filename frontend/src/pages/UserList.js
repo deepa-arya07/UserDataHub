@@ -10,7 +10,7 @@ const UserList = () => {
     const fetchUsers = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/api/users");
+        const response = await fetch("http://localhost:8000/api/users");
         if (response.ok) {
           const data = await response.json();
           setUsers(data);
@@ -41,7 +41,7 @@ const UserList = () => {
 
     if (confirmDelete.isConfirmed) {
       try {
-        const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+        const response = await fetch(`http://localhost:8000/api/users/${id}`, {
           method: "DELETE",
         });
 
@@ -111,7 +111,7 @@ const UserList = () => {
 
     if (formValues) {
       try {
-        const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+        const response = await fetch(`http://localhost:8000/api/users/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
